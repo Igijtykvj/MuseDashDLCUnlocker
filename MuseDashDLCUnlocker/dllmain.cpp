@@ -30,7 +30,9 @@ HWND FindMainWindow(unsigned long process_id)
 
 static bool Steamworks_SteamApps__BIsDlcInstalled(unsigned int nAppID, const MethodInfo *method)
 {
-	return true;
+	if (nAppID == 2593750U || nAppID == 1055810U) // Muse Dash DLC App ID
+		return true;
+	return false;
 }
 
 static void Main() 
